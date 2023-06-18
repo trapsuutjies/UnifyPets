@@ -19,7 +19,7 @@ namespace unifyPetsTests
             var sortedPets = PetRepository.SortPetsByCategoryAndName(pets, descending: true);
 
             //Assert
-            Assert.That(sortedPets.First().Name.Equals(descendingFirstName));
+            Assert.That(sortedPets.First().Name, Is.EqualTo(descendingFirstName));
         }
         [Test]
         public void AscendingTest()
@@ -36,7 +36,7 @@ namespace unifyPetsTests
             var sortedPets = PetRepository.SortPetsByCategoryAndName(pets, descending: false);
 
             //Assert
-            Assert.That(sortedPets.First().Name.Equals(ascendingFirstName));
+            Assert.That(sortedPets.First().Name, Is.EqualTo(ascendingFirstName));
         }
     }
 }
