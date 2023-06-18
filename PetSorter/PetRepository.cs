@@ -37,9 +37,9 @@ namespace PetSorter
             }
         }
 
-        public static IOrderedEnumerable<Pet> SortPetsByCategoryAndName(List<Pet> pets, bool descending)
+        public static IOrderedEnumerable<Pet> SortPetsByCategoryAndName(List<Pet> pets, bool descendingName)
         {
-            if (descending)
+            if (descendingName)
             {
                 return pets.OrderBy(pet => pet.Category?.Name ?? "").ThenByDescending(pet => pet.Name);
             }

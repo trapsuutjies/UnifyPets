@@ -10,7 +10,7 @@ namespace PetSorter
             var availablePets = PetRepository.GetPets(Status.Available);
             if (availablePets.Count > 0 ) 
             {
-                PetRepository.PrintPets(PetRepository.SortPetsByCategoryAndName(availablePets, descending: true));
+                PetRepository.PrintPets(PetRepository.SortPetsByCategoryAndName(availablePets, descendingName: true));
             }
             else
             {
