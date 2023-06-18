@@ -16,7 +16,7 @@ namespace unifyPetsTests
             pets.Add(new Pet() { Id = 1, Name = descendingFirstName, Category = category });
 
             //Act
-            var sortedPets = PetRepository.SortPetsByCategoryAndName(pets, descending: true);
+            var sortedPets = PetRepository.SortPetsByCategoryAndName(pets, descendingName: true);
 
             //Assert
             Assert.That(sortedPets.First().Name, Is.EqualTo(descendingFirstName));
@@ -33,7 +33,7 @@ namespace unifyPetsTests
             pets.Add(new Pet() { Id = 1, Name = descendingFirstName, Category = category });
 
             //Act
-            var sortedPets = PetRepository.SortPetsByCategoryAndName(pets, descending: false);
+            var sortedPets = PetRepository.SortPetsByCategoryAndName(pets, descendingName: false);
 
             //Assert
             Assert.That(sortedPets.First().Name, Is.EqualTo(ascendingFirstName));
